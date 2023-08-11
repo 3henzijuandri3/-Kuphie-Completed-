@@ -1,0 +1,2599 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+    font-size: 16px;
+}
+
+body {
+    color: black;
+    background-color: #151615;
+    overflow-x: hidden;
+}
+
+/* Konfigurasi Navigasi */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 50px;
+    color: white;
+    transition: ease-in-out .3s;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+
+    width: 40%;
+    list-style: none;
+}
+
+nav h3 {
+    font-size: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto Serif', serif;
+    transition: ease-in-out .2s;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: white;
+    border-radius: 12px;
+    background-color: #A27B5C;
+}
+
+.sticky {
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    width: 100%;
+}
+
+.nav-scroll {
+    background-color: #151615;
+}
+
+.menu-mobile {
+    display: none;
+    flex-direction: column;
+
+    height: 20px;
+    justify-content: space-between;
+}
+
+.menu-mobile:hover {
+    cursor: pointer;
+}
+
+span {
+    display: block;
+    
+    width: 28px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.38s;
+}
+
+.clicked {
+    background-color: #A27B5C;
+}
+
+/* ----------------------- */
+
+
+
+/* Konfigurasi Home Page */
+main .home-page {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+
+    height: 100vh;
+    background-image: url('../Assets/bg.png');
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+}
+
+main .home-page .opening {
+    text-align: left;
+    
+
+}
+
+main .home-page .opening h2 {
+    font-family: 'Roboto Serif', serif;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 3.75rem;
+}
+
+main .home-page .opening p {
+    
+    margin: 1rem 0 0 0;
+    font-size: 1.5rem;
+    font-family: 'Open Sans';
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+main .home-page .opening a {
+    padding: 10px;
+    border-radius: 6px;
+    line-height: 9.3rem;
+    color: white;
+    font-family: 'Roboto Serif', serif;
+    font-size: 1.25rem;
+    text-decoration: none;
+    border: 2px solid #A27B5C;
+    transition: .2s;
+}
+
+main .home-page .opening a:hover {
+    background-color: #a27b5cd2;
+}
+/* ----------------------- */
+
+
+
+/* Konfigurasi Content Beans*/
+article.beans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90vw;
+    margin: 2rem auto;
+    background-color: white;
+    transition: .7s;
+    
+}
+
+.transisi-article-beans {
+    transform: translateY(-100px);
+}
+
+.judul-beans {
+    text-align: center;
+}
+
+.judul-beans h2 {
+    padding: 40px 0 10px 0;
+    font-family: 'Prata', serif;
+    font-weight: lighter;
+    font-size: 2.5rem;
+}
+
+.judul-beans p {
+    margin: 10px 0 50px 0;
+    font-family: 'Open Sans';
+    color: #9a7d60;
+    font-size: 1.125rem;
+}
+
+.beans-section-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    margin-bottom: 40px;
+    
+}
+
+.arabica, .robusta, .liberica {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    transition: 0.2s;
+    margin: 1.5rem 0;
+    
+}
+
+.arabica:hover, .robusta:hover, .liberica:hover {
+    box-shadow: 0 4px 8px 0 #151615;
+    border-radius: 6px;
+    transform: scale(1.01);
+}
+
+.text, .gambar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    width: 50%;
+    padding: 30px;
+}
+
+.gambar img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.text h3 {
+    font-size: 2.5rem;
+    font-family: 'Prata', serif;
+    font-weight: lighter;
+    position: relative;
+}
+
+.text h3::after {
+    width: 60%;
+    height: 2px;
+    left: 30px;
+    position: absolute;
+    content: " ";
+    display: block;
+    background-color: #9a7d60;
+}
+
+.text p {
+    margin: 10px 0 0 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+/* ----------------------- */
+
+
+
+/* Konfigurasi Content Grind Sizes*/
+article.grind-sizes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90vw;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.transisi-article-grinds {
+    transform: translateY(-200px);
+}
+
+.judul-grind {
+    text-align: center;
+    
+}
+
+.judul-grind h2 {
+    padding: 40px 0 10px 0;
+    font-family: 'Prata', serif;
+    font-weight: lighter;
+    font-size: 2.5rem;
+}
+
+.judul-grind p {
+    margin: 10px 0 50px 0;
+    font-family: 'Open Sans';
+    color: #9a7d60;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.grinds-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.grinds-section-container .menu-grind {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    margin: 0 0 40px 0;
+    
+}
+
+.grinds-section-container .menu-grind a {
+    width: 10%;
+    padding: 10px;
+
+    text-decoration: none;
+    text-align: center;
+
+    font-family: 'Prata', serif;
+    font-weight: 400;
+
+    color: black;
+    border: 1.5px solid #9a7d60;
+    border-radius: 20px;
+
+    transition: ease-in-out .3s;
+}
+
+.grinds-section-container .menu-grind a:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: #9a7d60;
+    color: white;
+}
+
+.grinds-section-container .content-grind {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.grinds-section-container .content-grind .grind-img {
+    width: 50%;
+    padding: 0 1.7rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+.grind-img img {
+    width: 100%;
+    border-radius: 40px;
+    background-color: white;
+}
+
+.grinds-section-container .content-grind .grind-explanation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 50%; 
+    padding: 0 20px;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+/* ----------------------- */
+
+
+
+/* Konfigurasi Drinks*/
+article.drinks {
+    width: 90vw;
+    margin: 0 auto;
+    background-color: white;
+    
+}
+
+.transisi-article-drinks {
+    transform: translateY(-300px);
+}
+
+.judul-drinks {
+    text-align: center;
+}
+
+.judul-drinks h2 {
+    padding: 40px 0 10px 0;
+    font-family: 'Prata', serif;
+    font-weight: lighter;
+    font-size: 2.5rem;
+}
+
+.judul-drinks p {
+    margin: 10px 0 50px 0;
+    font-family: 'Open Sans';
+    color: #9a7d60;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.drinks-section-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin: 0 auto;
+    width: 80%;
+    
+}
+
+.drinks-section-container section { 
+    width: 30%;
+    margin: 0 0 60px 0;
+    
+    text-align: center;
+    transition: ease-in-out .2s;
+}
+
+.drinks-section-container section:hover { 
+    transform: scale(1.05);
+    color: #987756;
+}
+
+.drinks-section-container section h3 {
+    padding: 20px 0 0 0;
+    font-family: 'Open Sans';
+    font-weight: lighter;
+    font-size: 1.875rem;
+}
+
+.drinks-section-container section p {
+    margin: 10px 0 0 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+}
+
+.drinks-section-container section:nth-child(4) {
+    display: none;
+}
+
+.drinks-section-container section:nth-child(5) {
+    display: none;
+}
+
+.drinks-section-container section:nth-child(6) {
+    display: none;
+}
+
+.drinks-section-container section img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btn-more-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 0 100px 0;
+}
+
+.btn-more-container .more-btn {
+    padding: 12px;
+    border-radius: 14px;
+    color: black;
+    font-family: 'Prata', serif;
+    font-size: 1.125rem;
+    text-decoration: none;
+    border: 2px solid #A27B5C;
+    background-color: whitesmoke;
+    transition: .2s;
+}
+
+.btn-more-container .more-btn:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #A27B5C;
+}
+/* ----------------------- */
+
+
+
+/* Konfigurasi Aside */
+aside {
+    height: 85vh;
+    color: white;
+    background-image: url('../Assets/biodata.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.biodata .judul {
+    text-align: center;
+}
+
+.biodata .judul h2 {
+    padding: 40px 0 30px 0;
+    font-family: 'Prata', serif;
+    font-weight: lighter;
+    font-size: 2.5rem;
+}
+
+.biodata .biodata-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    background-color: white;
+    transition: ease-in-out .18s;
+}
+
+.biodata .biodata-content:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+.biodata-content .biodata-img {
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+.biodata .biodata-content .biodata-img .img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.biodata-content .deskripsi h2 {
+    font-family: 'Prata', serif;
+    font-weight: lighter;
+    font-size: 2.5rem;
+}
+
+.biodata-content .deskripsi h4 {
+    font-family: 'Open Sans';
+    color: #997551;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+/* ------------------------ */
+
+
+
+/* Konfigurasi Footer */
+.footer {
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    font-family: 'Prata', serif;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    font-size: 0.875rem;
+    z-index: 11;
+}
+/* ----------------------- */
+
+.bg-beans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 80vh;
+    background-image: url('../Assets/monokrom_beans.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    z-index: -1;
+    position: relative;
+    top: -150px;
+    color: white;
+
+    text-align: center;
+    font-family: 'Prata', serif;
+    font-weight: bold;
+    font-size: 1.375rem;
+}
+
+.bg-coffee {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 85vh;
+    background-image: url('../Assets/monokrom.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    z-index: -1;
+    position: relative;
+    top: -250px;
+    color: white;
+
+    text-align: center;
+    font-family: 'Prata', serif;
+    font-weight: bold;
+    font-size: 1.375rem;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 18px;
+}
+
+
+/* CSS RESPONSIVE */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 576px) {
+
+    .dummy-positioning {
+        display: none;
+    }
+
+    /* Pengaturan Homepage */
+    .menu-mobile {
+        display: block;
+        margin: 0 2rem 0 0;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    nav h3 {
+        margin: 0 0 0 2rem;
+        font-size: 1.3rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+    
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 80vw;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #151615;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 0.8s;
+        opacity: 1;
+    }
+
+    ul.slide {
+        transform: translateX(0);
+        opacity: 0.975;
+    } 
+    
+    main .home-page .opening {
+        text-align: center;
+        margin: 0 0.6rem;
+    }
+    
+    main .home-page .opening h2 {
+        font-size: 3.3rem;
+    }
+    
+    main .home-page .opening p {
+        margin: 1rem 0 0 0;
+        font-size: 1.22rem;
+    }
+    
+    main .home-page .opening a {
+        line-height: 9.3rem;
+        font-size: 1.2rem;
+    }
+    /* --------------------------------- */
+
+
+
+    /* Pengaturan Beans Article */
+    .judul-beans {
+        text-align: center;
+    }
+    
+    .judul-beans h2 {
+        padding: 2.5rem 0.2rem 0.625rem 0.2rem;
+        font-size: 2.5rem;
+    }
+    
+    .judul-beans p {
+        margin: 10px 0 30px 0;
+        font-size: 1.2rem;
+    }
+    
+    .beans-section-container {
+        width: 100%;
+    }
+    
+    .arabica, .robusta, .liberica {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .robusta {
+        flex-direction: column-reverse;
+    }
+    
+    .arabica:hover, .robusta:hover, .liberica:hover {
+        box-shadow: 0 0 0 0 white;
+        border-radius: 0;
+        transform: scale(1.01);
+    }
+    
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        text-align: justify;
+        width: 85%;
+        padding: 1rem;
+    }
+
+    .gambar {
+        width: 100%;
+    }
+    
+    .gambar img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .text h3 {
+        font-size: 1.4rem;
+    }
+    
+    .text h3::after {
+        width: 50%;
+        left: 22px;
+    }
+    
+    .text p {
+        margin: 10px 0 0 0;
+        font-size: 1.03rem;
+        letter-spacing: 0;
+        line-height: 24px;
+    }
+    /* ------------------------- */
+
+
+
+    /* Pengaturan Transisi ke Grinds */
+    .bg-beans {
+        font-size: 0.7rem;
+    }
+    /* ------------------------------ */
+
+
+
+    /* Pengaturan Grinds */
+    .judul-grind {
+        text-align: center;
+    }
+    
+    .judul-grind h2 {
+        padding: 2.5rem 0.2rem 0.625rem 0.2rem;
+        font-size: 2rem;
+    }
+    
+    .judul-grind p {
+        padding: 0.625rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .grinds-section-container {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    
+    .grinds-section-container .menu-grind {
+        display: flex;
+        justify-content: space-around;
+    
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+    
+    .grinds-section-container .menu-grind a {
+        width: 25%;
+        padding: 4px;
+        font-size: 0.9rem;
+        color: black;
+    }
+    
+    .grinds-section-container .menu-grind a:hover {
+        transform: scale(1.04);
+        cursor: pointer;
+        background-color: #9a7d60;
+        color: white;
+    }
+    
+    .grinds-section-container .content-grind {
+        display: flex;
+        flex-direction: column;
+    
+        width: 85%;
+    }
+    
+    .grinds-section-container .content-grind .grind-img {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .grind-img img {
+        width: 100%;
+    }
+    
+    .grinds-section-container .content-grind .grind-explanation {
+        text-align: justify;
+        width: 100%; 
+        margin: 1rem 0;
+        font-size: 1.1rem;
+        letter-spacing: 0;
+        line-height: 24px;
+    }
+    /* ------------------------------- */
+
+
+
+    /* Transisi Ke Drinks */
+    .bg-coffee {
+        font-size: 0.75rem;
+    }
+    /* ------------------------------- */
+
+
+
+    /* Konfigurasi Drinks */    
+    .judul-drinks {
+        text-align: center;
+    }
+    
+    .judul-drinks h2 {
+        padding: 2.5rem 0.2rem 0.625rem 0.2rem;
+        font-size: 2rem;
+    }
+    
+    .judul-drinks p {
+        padding: 0.625rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .drinks-section-container {
+        display: flex;
+        justify-content: space-evenly;
+    
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .drinks-section-container section { 
+        width: 44%;
+        margin: 0 0.5rem 3.75rem 0.5rem;
+        text-align: center;
+    }
+    
+    .drinks-section-container section:hover { 
+        transform: scale(1);
+        color: black;
+    }
+    
+    .drinks-section-container section h3 {
+        padding: 1.25rem 0 0 0;
+        font-family: 'Open Sans';
+        font-weight: lighter;
+        font-size: 1.45rem;
+    }
+    
+    .drinks-section-container section p {
+        margin: 0.625rem 0 0 0;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: lighter;
+        font-size: 0.95rem;
+        letter-spacing: 0.3px;
+    }
+    
+    .drinks-section-container section:nth-child(3) {
+        display: none;
+    }
+
+    .drinks-section-container section:nth-child(4) {
+        display: none;
+    }
+    
+    .drinks-section-container section:nth-child(5) {
+        display: none;
+    }
+    
+    .drinks-section-container section:nth-child(6) {
+        display: none;
+    }
+    
+    .drinks-section-container section img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .btn-more-container {
+        padding: 0 0 6.25rem 0;
+    }
+    
+    .btn-more-container .more-btn {
+        padding: 8px;
+        border-radius: 14px;
+        font-size: 1.03rem;
+        text-decoration: none;
+    }
+    
+    .btn-more-container .more-btn:hover {
+        cursor:default;
+        color: black;
+        background-color: white;
+    }
+    /* --------------------------------- */
+
+
+
+    /* Konfigurasi Aside */
+    .biodata .judul {
+        text-align: center;
+    }
+
+    .biodata .judul h2 {
+        padding: 2.5rem 0.6rem 0.625rem 0.6rem;
+        font-size: 2.8rem;
+    }
+
+    .biodata .biodata-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        width: 70vw;
+        margin: 0 auto;
+        text-align: center;
+        color: black;
+        background-color: white;
+        transition: ease-in-out .18s;
+    }
+
+    .biodata .biodata-content:hover {
+        transform: scale(1.08);
+        cursor: pointer;
+    }
+
+    .biodata-content .biodata-img {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+    .biodata .biodata-content .biodata-img .img {
+        border-radius: 5px;
+    }
+
+    .biodata-content .deskripsi h2 {
+        font-family: 'Prata', serif;
+        font-weight: lighter;
+        font-size: 1.4rem;
+    }
+    .biodata-content .deskripsi h4 {
+
+        font-family: 'Open Sans';
+        color: #997551;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) {
+    /* Konfigurasi Navbar */
+    nav {
+        justify-content: space-around;
+        height: 3.125rem;
+    }
+    
+    nav ul {
+        justify-content: space-around;
+        width: 55%;
+    }
+    
+    nav h3 {
+        font-size: 1.3rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+    /* ---------------------------------------- */
+
+
+    /* Konfigurasi Home Page */
+    .dummy-positioning {
+        display: none;
+    }
+
+    main .home-page .opening {
+        text-align: left;
+        margin: 0 0 0 1.5rem;
+
+    }
+
+    main .home-page .opening h2 {
+        font-size: 3.rem;
+    }
+
+    main .home-page .opening p {
+        margin: 1rem 0 0 0;
+        font-size: 1.2rem;
+    }
+
+    main .home-page .opening a {
+        padding: 8px;
+        line-height: 9.3rem;
+        font-size: 1.05rem;
+    }
+
+    main .home-page .opening a:hover {
+        background-color: #a27b5cd2;
+    }
+    /* ----------------------- */
+
+
+    /* Konfigurasi Beans */
+    .judul-beans h2 {
+        padding: 40px 0 10px 0;
+        font-size: 2.7rem;
+    }
+    
+    .judul-beans p {
+        margin: 10px 0 50px 0;
+        font-size: 1.2rem;
+    }
+    
+    .beans-section-container {
+        width: 100%;
+    }
+    
+    .arabica, .robusta, .liberica {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .robusta {
+        flex-direction: column-reverse;
+    }
+    
+    .arabica:hover, .robusta:hover, .liberica:hover {
+        box-shadow: 0 0 0 0 white;
+        border-radius: 0;
+        transform: scale(1.01);
+    }
+    
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        text-align: justify;
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .gambar {
+        width: 80%;
+    }
+    
+    .gambar img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .text h3 {
+        font-size: 1.8rem;
+    }
+    
+    .text h3::after {
+        width: 50%;
+        left: 22px;
+    }
+    
+    .text p {
+        margin: 1rem 0 0 0;
+        font-size: 1.08rem;
+        letter-spacing: 0;
+        line-height: 26px;
+    }
+    /* ----------------------- */
+
+
+
+    /* Pengaturan Transisi ke Grinds */
+    .bg-beans {
+        font-size: 0.8rem;
+    }
+    /* ------------------------------ */
+
+
+
+    /* Pengaturan Grinds */
+    .judul-grind {
+        text-align: center;
+    }
+    
+    .judul-grind h2 {
+        padding: 2.5rem 0.2rem 0.625rem 0.2rem;
+        font-size: 2.5rem;
+    }
+    
+    .judul-grind p {
+        padding: 0.625rem 1rem;
+        font-size: 1.15rem;
+    }
+    
+    .grinds-section-container {
+        width: 90%;
+        margin-bottom: 50px;
+    }
+    
+    .grinds-section-container .menu-grind {
+        display: flex;
+        justify-content: space-around;
+    
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+    
+    .grinds-section-container .menu-grind a {
+        width: 28%;
+        padding: 4px;
+        font-size: 1.05rem;
+        color: black;
+    }
+    
+    .grinds-section-container .menu-grind a:hover {
+        transform: scale(1.04);
+        cursor: pointer;
+        background-color: #9a7d60;
+        color: white;
+    }
+    
+    .grinds-section-container .content-grind {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .grinds-section-container .content-grind .grind-img {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .grind-img img {
+        width: 100%;
+    }
+    
+    .grinds-section-container .content-grind .grind-explanation {
+        text-align: justify;
+        width: 100%; 
+        margin: 1.5rem 0;
+        font-size: 1.2rem;
+        letter-spacing: 0;
+        line-height: 24px;
+    }
+    /* ------------------------------- */
+
+    /* Transisi Ke Drinks */
+    .bg-coffee {
+        font-size: 0.85rem;
+    }
+    /* ------------------------------- */
+
+
+
+    /* Konfigurasi Drinks */    
+    .judul-drinks {
+        text-align: center;
+    }
+    
+    .judul-drinks h2 {
+        padding: 2.5rem 0.2rem 0.625rem 0.2rem;
+        font-size: 2.6rem;
+    }
+    
+    .judul-drinks p {
+        padding: 0.625rem 1rem;
+        font-size: 1.15rem;
+    }
+    
+    .drinks-section-container {
+        display: flex;
+        /* flex-direction: column;
+        align-items: center; */
+        justify-content: space-evenly;
+    
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .drinks-section-container section { 
+        width: 42%;
+        margin: 0 0.5rem 3.75rem 0.5rem;
+        text-align: center;
+    }
+    
+    .drinks-section-container section:hover { 
+        transform: scale(1);
+        color: black;
+    }
+    
+    .drinks-section-container section h3 {
+        padding: 1.25rem 0 0 0;
+        font-family: 'Open Sans';
+        font-weight: lighter;
+        font-size: 2rem;
+    }
+    
+    .drinks-section-container section p {
+        margin: 0.625rem 0 0 0;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: lighter;
+        font-size: 1.1rem;
+        letter-spacing: 0.3px;
+    }
+    
+    .drinks-section-container section:nth-child(3) {
+        display: none;
+    }
+
+    .drinks-section-container section:nth-child(4) {
+        display: none;
+    }
+    
+    .drinks-section-container section:nth-child(5) {
+        display: none;
+    }
+    
+    .drinks-section-container section:nth-child(6) {
+        display: none;
+    }
+    
+    .drinks-section-container section img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .btn-more-container {
+        padding: 0 0 6.25rem 0;
+    }
+    
+    .btn-more-container .more-btn {
+        padding: 10px;
+        border-radius: 14px;
+        font-size: 1.1rem;
+        text-decoration: none;
+    }
+    
+    .btn-more-container .more-btn:hover {
+        cursor: default;
+        color: black;
+        background-color: white;
+    }
+    /* --------------------------------- */
+
+
+    /* Konfigurasi Aside */
+    .biodata .judul {
+        text-align: center;
+    }
+
+    .biodata .judul h2 {
+        padding: 2.5rem 0.6rem 0.625rem 0.6rem;
+        font-size: 3rem;
+    }
+
+    .biodata .biodata-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        width: 42%;
+        margin: 0 auto;
+        text-align: center;
+        color: black;
+        background-color: white;
+        transition: ease-in-out .18s;
+    }
+
+    .biodata .biodata-content:hover {
+        transform: scale(1.08);
+        cursor: pointer;
+    }
+
+    .biodata-content .biodata-img {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+    .biodata .biodata-content .biodata-img .img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .biodata-content .deskripsi h2 {
+        font-family: 'Prata', serif;
+        font-weight: lighter;
+        font-size: 2.5rem;
+    }
+
+    .biodata-content .deskripsi h4 {
+        font-family: 'Open Sans';
+        color: #997551;
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
+/* ------------------------ */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+   
+    .dummy-positioning {
+        display: block;
+    }
+
+    /* Konfigurasi Navigasi */
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+
+        width: 50%;
+        list-style: none;
+        
+    }
+
+    nav h3 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-family: 'Roboto Serif', serif;
+        transition: ease-in-out .2s;
+        letter-spacing: 1px;
+    }
+
+    nav ul li a:hover {
+        color: white;
+        border-radius: 12px;
+        background-color: #A27B5C;
+    }
+
+    .sticky {
+        position: fixed;
+        z-index: 8;
+        top: 0;
+        width: 100%;
+    }
+
+    .nav-scroll {
+        /* background-color: #191A19; */
+        background-color: #151615;
+    }
+
+    /* ----------------------- */
+
+
+
+    /* Konfigurasi Home Page */ 
+
+    main .home-page .opening {
+        margin: 0 0 0 4rem;
+    }
+
+    main .home-page .opening h2 {
+        font-size: 4.4rem;
+    }
+
+    main .home-page .opening p {
+        margin: 1rem 0 0 0;
+        font-size: 1.6rem;
+    }
+
+    main .home-page .opening a {
+        font-size: 1.2rem;
+    }
+
+    main .home-page .opening a:hover {
+        background-color: #a27b5cd2;
+    }
+    /* ----------------------- */
+
+
+
+    /* Konfigurasi Content Beans*/
+    .judul-beans h2 {
+        font-size: 3rem;
+    }
+
+    .judul-beans p {
+        font-size: 1.3rem;
+    }
+
+    .beans-section-container {
+        width: 100%;
+    }
+    
+    .arabica, .robusta, .liberica {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .robusta {
+        flex-direction: column-reverse;
+    }
+    
+    .arabica:hover, .robusta:hover, .liberica:hover {
+        box-shadow: 0 0 0 0 white;
+        border-radius: 0;
+        transform: scale(1);
+    }
+    
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        text-align: justify;
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .gambar {
+        width: 80%;
+    }
+    
+    .gambar img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .text h3 {
+        font-size: 1.8rem;
+    }
+    
+    .text h3::after {
+        width: 50%;
+        left: 22px;
+    }
+    
+    .text p {
+        margin: 1rem 0 0 0;
+        font-size: 1.08rem;
+        letter-spacing: 0;
+        line-height: 26px;
+    }
+    /* ----------------------- */
+
+    /* Pengaturan Transisi ke Grinds */
+    .bg-beans {
+        font-size: 1rem;
+    }
+    /* ------------------------------ */
+
+    /* Konfigurasi Grinds */
+    .judul-grind {
+        text-align: center;
+    }
+    
+    .judul-grind h2 {
+        padding: 2.5rem 0.2rem 0.625rem 0.2rem;
+        font-size: 3rem;
+    }
+    
+    .judul-grind p {
+        padding: 0.625rem 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .grinds-section-container {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    
+    .grinds-section-container .menu-grind {
+        display: flex;
+        justify-content: space-around;
+    
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+    
+    .grinds-section-container .menu-grind a {
+        width: 22%;
+        padding: 4px;
+        font-size: 1.05rem;
+        color: black;
+    }
+    
+    .grinds-section-container .menu-grind a:hover {
+        transform: scale(1.04);
+        cursor: pointer;
+        background-color: #9a7d60;
+        color: white;
+    }
+    
+    .grinds-section-container .content-grind {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .grinds-section-container .content-grind .grind-img {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .grind-img img {
+        width: 100%;
+    }
+    
+    .grinds-section-container .content-grind .grind-explanation {
+        text-align: justify;
+        width: 100%; 
+        margin: 1.5rem 0;
+        font-size: 1.2rem;
+        letter-spacing: 0;
+        line-height: 24px;
+    }
+    /* ------------------------------- */
+
+    /* Transisi Ke Drinks */
+    .bg-coffee {
+        font-size: 0.85rem;
+    }
+    /* ------------------------------- */
+
+
+
+    /* Konfigurasi Drinks */    
+    .judul-drinks {
+        text-align: center;
+    }
+    
+    .judul-drinks h2 {
+        padding: 2.5rem 0.2rem 0.625rem 0.2rem;
+        font-size: 2.6rem;
+    }
+    
+    .judul-drinks p {
+        padding: 0.625rem 1rem;
+        font-size: 1.15rem;
+    }
+    
+    .drinks-section-container {
+        display: flex;
+        /* flex-direction: column;
+        align-items: center; */
+        justify-content: space-evenly;
+    
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .drinks-section-container section { 
+        width: 35%;
+        margin: 0 0.5rem 3.75rem 0.5rem;
+        text-align: center;
+    }
+    
+    .drinks-section-container section:hover { 
+        transform: scale(1);
+        color: black;
+    }
+    
+    .drinks-section-container section h3 {
+        padding: 1.25rem 0 0 0;
+        font-family: 'Open Sans';
+        font-weight: lighter;
+        font-size: 2rem;
+    }
+    
+    .drinks-section-container section p {
+        margin: 0.625rem 0 0 0;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: lighter;
+        font-size: 1.1rem;
+        letter-spacing: 0.3px;
+    }
+    
+    .drinks-section-container section:nth-child(3) {
+        display: none;
+    }
+
+    .drinks-section-container section:nth-child(4) {
+        display: none;
+    }
+    
+    .drinks-section-container section:nth-child(5) {
+        display: none;
+    }
+    
+    .drinks-section-container section:nth-child(6) {
+        display: none;
+    }
+    
+    .drinks-section-container section img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .btn-more-container {
+        padding: 0 0 6.25rem 0;
+    }
+    
+    .btn-more-container .more-btn {
+        padding: 10px;
+        border-radius: 14px;
+        font-size: 1.1rem;
+        text-decoration: none;
+    }
+    
+    .btn-more-container .more-btn:hover {
+        cursor: default;
+        color: black;
+        background-color: white;
+    }
+    /* --------------------------------- */
+
+
+    /* Konfigurasi Aside */
+    .biodata .judul {
+        text-align: center;
+    }
+
+    .biodata .judul h2 {
+        padding: 2.5rem 0.6rem 0.625rem 0.6rem;
+        font-size: 3rem;
+    }
+
+    .biodata .biodata-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        width: 42%;
+        margin: 0 auto;
+        text-align: center;
+        color: black;
+        background-color: white;
+        transition: ease-in-out .18s;
+    }
+
+    .biodata .biodata-content:hover {
+        transform: scale(1.08);
+        cursor: pointer;
+    }
+
+    .biodata-content .biodata-img {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+    .biodata .biodata-content .biodata-img .img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .biodata-content .deskripsi h2 {
+        font-family: 'Prata', serif;
+        font-weight: lighter;
+        font-size: 2.5rem;
+    }
+
+    .biodata-content .deskripsi h4 {
+        font-family: 'Open Sans';
+        color: #997551;
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
+    /* ------------------------ */
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    /* Konfigurasi Navigasi */
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+
+        width: 40%;
+        list-style: none;
+        
+    }
+
+    nav h3 {
+        font-size: 1.6rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+    /* ----------------------- */
+
+
+
+    /* Konfigurasi Home Page */
+
+    main .home-page .opening {
+        text-align: left;
+    }
+
+    main .home-page .opening h2 {
+        font-size: 4rem;
+    }
+
+    main .home-page .opening p {
+        font-size: 1.4rem;
+    }
+    /* ----------------------- */
+
+
+
+    /* Konfigurasi Content Beans*/
+    .judul-beans {
+        text-align: center;
+    }
+
+    .judul-beans h2 {
+        font-size: 2.7rem;
+    }
+
+    .judul-beans p {
+        font-size: 1.2rem;
+    }
+
+    .beans-section-container {
+        width: 80%;
+    }
+
+    .arabica, .robusta, .liberica {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin: 1.5rem 0;
+    }
+
+    .arabica:hover, .robusta:hover, .liberica:hover {
+        box-shadow: 0;
+        border-radius: 0;
+        transform: scale(1);
+    }
+
+    .text, .gambar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+        width: 50%;
+        padding: 1rem;
+    }
+
+    .gambar img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .text h3 {
+        font-size: 1.7rem;
+    }
+
+    .text h3::after {
+        width: 60%;
+        height: 2px;
+        left: 20px;
+        position: absolute;
+        content: " ";
+        display: block;
+        background-color: #9a7d60;
+    }
+
+    .text p {
+
+        font-size: 1.05rem;
+        letter-spacing: 0.5px;
+        line-height: 20px;
+    }
+    /* ----------------------- */
+
+    /* Transisi ke Grinds */
+    .bg-beans {
+        font-size: 1.3rem;
+    }
+    /* --------------------- */
+
+    /* Konfigurasi Content Grind Sizes*/
+    
+    .judul-grind h2 {
+        padding: 40px 0 10px 0;
+        font-size: 3rem;
+    }
+
+    .judul-grind p {
+        font-size: 1.2rem;
+    }
+
+    .grinds-section-container .menu-grind a {
+        width: 20%;
+        padding: 8px;
+        margin: 1rem 0;
+    }
+
+    .grinds-section-container .content-grind {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .grinds-section-container .content-grind .grind-img {
+        width: 50%;
+        padding: 0 1.7rem;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .grinds-section-container .content-grind .grind-explanation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 50%; 
+        padding: 0 1.8rem;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+    /* ----------------------- */
+
+
+    /* Transisi ke Drinks */
+    .bg-coffee {
+        font-size: 1.3rem;
+    }
+    /* ------------------------ */
+
+    /* Konfigurasi Drinks*/
+    .judul-drinks h2 {
+        font-size: 3rem;
+    }
+
+    .judul-drinks p {
+        margin: 10px 0 50px 0;
+        font-family: 'Open Sans';
+        color: #9a7d60;
+        font-weight: 500;
+        font-size: 1.125rem;
+    }
+
+    .drinks-section-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        margin: 0 auto;
+        width: 80%;
+        
+    }
+
+    .drinks-section-container section { 
+        width: 30%;
+        margin: 0 0 60px 0;
+    }
+
+    .drinks-section-container section:hover { 
+        transform: scale(1);
+        color: black;
+    }
+
+    .drinks-section-container section h3 {
+        padding: 20px 0 0 0;
+        font-family: 'Open Sans';
+        font-weight: lighter;
+        font-size: 1.875rem;
+    }
+
+    .drinks-section-container section p {
+        margin: 10px 0 0 0;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 1.125rem;
+        letter-spacing: 1px;
+    }
+
+    .drinks-section-container section:nth-child(3) {
+        display: block;
+    }
+
+    .drinks-section-container section:nth-child(4) {
+        display: none;
+    }
+
+    .drinks-section-container section:nth-child(5) {
+        display: none;
+    }
+
+    .drinks-section-container section:nth-child(6) {
+        display: none;
+    }
+
+    .drinks-section-container section img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .btn-more-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0 0 100px 0;
+    }
+
+    .btn-more-container .more-btn {
+        padding: 12px;
+        border-radius: 14px;
+        color: black;
+        font-family: 'Prata', serif;
+        font-size: 1.125rem;
+        text-decoration: none;
+        border: 2px solid #A27B5C;
+        background-color: whitesmoke;
+        transition: .2s;
+    }
+
+    .btn-more-container .more-btn:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #A27B5C;
+    }
+    /* ----------------------- */
+
+
+
+    /* Konfigurasi Aside */ 
+
+    .biodata .judul h2 {
+        font-size: 2.8rem;
+    }
+
+    .biodata .biodata-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        width: 33%;
+        margin: 1rem auto;
+        text-align: center;
+        color: black;
+        background-color: white;
+        transition: ease-in-out .18s;
+    }
+
+    .biodata .biodata-content .biodata-img {
+        width: 100%;
+    }
+
+    .biodata-content .deskripsi h2 {
+        font-size: 2.2rem;
+    }
+    
+    .biodata-content .deskripsi h4 {
+        font-family: 'Open Sans';
+        color: #997551;
+        font-weight: 500;
+        font-size: 1.15rem;
+    }
+    /* ------------------------ */
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    /* Konfigurasi Navigasi */
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        height: 50px;
+        color: white;
+        transition: ease-in-out .3s;
+        
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+
+        width: 40%;
+        list-style: none;
+        
+    }
+
+    nav h3 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-family: 'Roboto Serif', serif;
+        transition: ease-in-out .2s;
+        letter-spacing: 1px;
+    }
+
+    nav ul li a:hover {
+        color: white;
+        border-radius: 12px;
+        background-color: #A27B5C;
+    }
+
+    .sticky {
+        position: fixed;
+        z-index: 8;
+        top: 0;
+        width: 100%;
+    }
+
+    .nav-scroll {
+        /* background-color: #191A19; */
+        background-color: #151615;
+    }
+
+    /* ----------------------- */
+
+
+
+    /* Konfigurasi Home Page */
+    main .home-page {
+        display: flex;
+        justify-content: space-around; 
+        align-items: center;
+
+        height: 100vh;
+        background-image: url('../Assets/bg.png');
+        background-position: center left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        color: rgb(255, 255, 255);
+        
+    }
+
+    main .home-page .opening {
+        text-align: left;
+        
+
+    }
+
+    main .home-page .opening h2 {
+        font-family: 'Roboto Serif', serif;
+        font-style: normal;
+        font-weight: lighter;
+        font-size: 3.75rem;
+    }
+
+    main .home-page .opening p {
+        
+        margin: 1rem 0 0 0;
+        font-size: 1.5rem;
+        font-family: 'Open Sans';
+        font-style: normal;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    main .home-page .opening a {
+        padding: 10px;
+        border-radius: 6px;
+        line-height: 9.3rem;
+        color: white;
+        font-family: 'Roboto Serif', serif;
+        font-size: 1.25rem;
+        text-decoration: none;
+        border: 2px solid #A27B5C;
+        transition: .2s;
+    }
+
+    main .home-page .opening a:hover {
+        background-color: #a27b5cd2;
+    }
+    /* ----------------------- */
+
+
+
+    /* Konfigurasi Content Beans*/
+    article.beans {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 90vw;
+        margin: 2rem auto;
+        background-color: white;
+        /* background-color: rgb(240, 240, 240); */
+        transition: .7s;
+        
+    }
+
+    .transisi-article-beans {
+        transform: translateY(-100px);
+        /* Karena keangkat 100 ke atas, jadinya beans dan grinds ga nempel */
+    }
+
+    .judul-beans {
+        /* margin-top: 70px;
+        margin-bottom: 50px;
+        padding-top: 10px; */
+        text-align: center;
+
+        
+    }
+
+    .judul-beans h2 {
+        padding: 40px 0 10px 0;
+        font-family: 'Prata', serif;
+        font-weight: lighter;
+        font-size: 2.5rem;
+    }
+
+    /* .judul-beans h2::after {
+        width: 18%;
+        height: 2px;
+        left: 575px;
+        position: absolute;
+        content: " ";
+        display: block;
+        background-color: #9a7d60;
+    } */
+
+    .judul-beans p {
+        margin: 10px 0 50px 0;
+        font-family: 'Open Sans';
+        color: #9a7d60;
+        font-size: 1.125rem;
+    }
+
+    .beans-section-container {
+        display: flex;
+        flex-direction: column;
+
+        width: 80%;
+        margin-bottom: 40px;
+        
+    }
+
+    .arabica, .robusta, .liberica {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        transition: 0.2s;
+        margin: 1.5rem 0;
+        
+    }
+
+    .arabica:hover, .robusta:hover, .liberica:hover {
+        box-shadow: 0 4px 8px 0 #151615;
+        border-radius: 6px;
+        transform: scale(1.01);
+    }
+
+    .text, .gambar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+        width: 50%;
+        padding: 30px;
+    }
+
+    .gambar img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .text h3 {
+        font-size: 2.5rem;
+        font-family: 'Prata', serif;
+        font-weight: lighter;
+        position: relative;
+    }
+
+    .text h3::after {
+        width: 60%;
+        height: 2px;
+        left: 30px;
+        position: absolute;
+        content: " ";
+        display: block;
+        background-color: #9a7d60;
+    }
+
+    .text p {
+        margin: 10px 0 0 0;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 1.125rem;
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
+    /* ----------------------- */
+
+
+
+    /* Konfigurasi Content Grind Sizes*/
+    article.grind-sizes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 90vw;
+        margin: 0 auto;
+        /* background-color: white; */
+        background-color: white;
+        
+    }
+
+    .transisi-article-grinds {
+        transform: translateY(-200px);
+    }
+
+    .judul-grind {
+        text-align: center;
+        
+    }
+
+    .judul-grind h2 {
+        padding: 40px 0 10px 0;
+        font-family: 'Prata', serif;
+        font-weight: lighter;
+        font-size: 2.5rem;
+    }
+
+    .judul-grind p {
+        margin: 10px 0 50px 0;
+        font-family: 'Open Sans';
+        color: #9a7d60;
+        font-weight: 500;
+        font-size: 1.125rem;
+    }
+
+    .grinds-section-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        width: 80%;
+        /* border: 2px solid red; */
+        margin-bottom: 50px;
+        /* padding: 20px; */
+    }
+
+    .grinds-section-container .menu-grind {
+        display: flex;
+        justify-content: space-around;
+
+        width: 100%;
+        margin: 0 0 40px 0;
+        
+    }
+
+    .grinds-section-container .menu-grind a {
+        width: 10%;
+        padding: 10px;
+
+        text-decoration: none;
+        text-align: center;
+
+        font-family: 'Prata', serif;
+        font-weight: 400;
+
+        color: black;
+        border: 1.5px solid #9a7d60;
+        border-radius: 20px;
+
+        transition: ease-in-out .3s;
+    }
+
+    .grinds-section-container .menu-grind a:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        background-color: #9a7d60;
+        color: white;
+    }
+
+    .grinds-section-container .content-grind {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        
+    }
+
+    .grinds-section-container .content-grind .grind-img {
+        width: 50%;
+        padding: 0 1.7rem;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+    }
+
+    .grind-img img {
+        width: 100%;
+        border-radius: 40px;
+        background-color: white;
+    }
+
+    .grinds-section-container .content-grind .grind-explanation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 50%; 
+        padding: 0 20px;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 1.25rem;
+        letter-spacing: 1px;
+    }
+    /* ----------------------- */
+
+
+
+    /* Konfigurasi Drinks*/
+    article.drinks {
+        width: 90vw;
+        margin: 0 auto;
+        background-color: white;
+        
+    }
+
+    .transisi-article-drinks {
+        transform: translateY(-300px);
+    }
+
+    .judul-drinks {
+        text-align: center;
+        /* margin-bottom: 50px; */
+        /* padding-top: 70px; */
+        
+    }
+
+    .judul-drinks h2 {
+        padding: 40px 0 10px 0;
+        font-family: 'Prata', serif;
+        font-weight: lighter;
+        font-size: 2.5rem;
+    }
+
+    .judul-drinks p {
+        margin: 10px 0 50px 0;
+        font-family: 'Open Sans';
+        color: #9a7d60;
+        font-weight: 500;
+        font-size: 1.125rem;
+    }
+
+    .drinks-section-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        margin: 0 auto;
+        width: 80%;
+        
+    }
+
+    .drinks-section-container section { 
+        width: 30%;
+        margin: 0 0 60px 0;
+        
+        text-align: center;
+        transition: ease-in-out .2s;
+    }
+
+    .drinks-section-container section:hover { 
+        transform: scale(1.05);
+        color: #987756;
+    }
+
+    .drinks-section-container section h3 {
+        padding: 20px 0 0 0;
+        font-family: 'Open Sans';
+        font-weight: lighter;
+        font-size: 1.875rem;
+    }
+
+    .drinks-section-container section p {
+        margin: 10px 0 0 0;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 1.125rem;
+        letter-spacing: 1px;
+    }
+
+    .drinks-section-container section:nth-child(4) {
+        display: none;
+    }
+
+    .drinks-section-container section:nth-child(5) {
+        display: none;
+    }
+
+    .drinks-section-container section:nth-child(6) {
+        display: none;
+    }
+
+    .drinks-section-container section img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .btn-more-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0 0 100px 0;
+    }
+
+    .btn-more-container .more-btn {
+        padding: 12px;
+        border-radius: 14px;
+        color: black;
+        font-family: 'Prata', serif;
+        font-size: 1.125rem;
+        text-decoration: none;
+        border: 2px solid #A27B5C;
+        background-color: whitesmoke;
+        transition: .2s;
+    }
+
+    .btn-more-container .more-btn:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #A27B5C;
+    }
+    /* ----------------------- */
+
+
+
+    /* Konfigurasi Aside */
+    .biodata {
+        height: 85vh;
+        color: white;
+        background-image: url('../Assets/biodata.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .biodata .judul {
+        text-align: center;
+    }
+
+    .biodata .judul h2 {
+        padding: 40px 0 30px 0;
+        font-family: 'Prata', serif;
+        font-weight: lighter;
+        font-size: 2.5rem;
+    }
+
+    .biodata .biodata-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        width: 26%;
+        margin: 0 auto;
+        text-align: center;
+        color: black;
+        background-color: white;
+        transition: ease-in-out .18s;
+    }
+
+    .biodata .biodata-content:hover {
+        transform: scale(1.08);
+        cursor: pointer;
+    }
+
+    .biodata-content .biodata-img {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+    .biodata .biodata-content .biodata-img .img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .biodata-content .deskripsi h2 {
+        font-family: 'Prata', serif;
+        font-weight: lighter;
+        font-size: 2.3rem;
+    }
+
+    .biodata-content .deskripsi h4 {
+        font-family: 'Open Sans';
+        color: #997551;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    /* ------------------------ */
+
+    .bg-beans {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 80vh;
+        background-image: url('../Assets/monokrom_beans.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
+        z-index: -1;
+        position: relative;
+        top: -150px;
+        color: white;
+
+        text-align: center;
+        font-family: 'Prata', serif;
+        font-weight: bold;
+        font-size: 1.375rem;
+    }
+
+    .bg-coffee {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 85vh;
+        background-image: url('../Assets/monokrom.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
+        z-index: -1;
+        position: relative;
+        top: -250px;
+        color: white;
+
+        text-align: center;
+        font-family: 'Prata', serif;
+        font-weight: bold;
+        font-size: 1.375rem;
+    }
+}
